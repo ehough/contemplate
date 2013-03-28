@@ -1,12 +1,8 @@
 {
     "name": "ehough/contemplate",
-
     "description": "Simple and ultra-fast PHP template library",
-
     "homepage": "https://github.com/ehough/contemplate",
-
-    "license": "GPL-3.0+",
-
+    "license": "MPL-2.0",
     "authors": [
         {
             "name": "Eric Hough",
@@ -22,7 +18,7 @@
 
     "require-dev": {
         
-	    "ehough/pulsar": "1.*"
+	    "ehough/pulsar": "~2.0.0"
     },
 
     "autoload": {

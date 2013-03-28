@@ -1,8 +1,7 @@
 language: php
 php:
+  - 5.2
   - 5.3
   - 5.4
-before_script:
-  - wget http://getcomposer.org/composer.phar
-  - php composer.phar install --dev
+before_script: "src/test/bash/travis-setup.sh"
 script: "phpunit -c src/test/resources/phpunit.xml"

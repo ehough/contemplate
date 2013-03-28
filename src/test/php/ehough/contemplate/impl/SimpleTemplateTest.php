@@ -15,6 +15,7 @@ class ehough_contemplate_impl_SimpleTemplateTest extends PHPUnit_Framework_TestC
 
     public function setUp()
     {
+        ini_set('error_reporting', -1);
         $this->_sut = new ehough_contemplate_impl_SimpleTemplate();
     }
 

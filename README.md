@@ -1,12 +1,14 @@
 contemplate [![Build Status](https://secure.travis-ci.org/ehough/contemplate.png)](http://travis-ci.org/ehough/contemplate)
 =====
 
-Template library that uses pure PHP syntax. Nothing new to learn, and blazingly fast.
+Template library that uses pure PHP syntax. Nothing new to learn, blazingly fast, and compatible with PHP 5.2+.
 
-    $template = new ehough_contemplate_impl_SimpleTemplate();  //implements ehough_contemplate_api_Template
-    $template->setPath('/some/path/to/template.html.php');
+```php
+$template = new ehough_contemplate_impl_SimpleTemplate();  //implements ehough_contemplate_api_Template
+$template->setPath('/some/path/to/template.html.php');
 
-    $template->setVariable('foo', 'bar');
-    $template->setVariable('baz', array('one' => 'two'));
+$template->setVariable('foo', 'bar');
+$template->setVariable('baz', array('one' => 'two'));
 
-    echo $template->toString();
+echo $template->toString();
+```

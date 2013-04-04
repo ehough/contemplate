@@ -1,12 +1,8 @@
 {
     "name": "ehough/contemplate",
-
-    "description": "Simple and ultra-fast PHP template library",
-
+    "description": "Template library that uses pure PHP syntax. Nothing new to learn, blazingly fast, and compatible with PHP 5.2+.",
     "homepage": "https://github.com/ehough/contemplate",
-
-    "license": "GPL-3.0+",
-
+    "license": "MPL-2.0",
     "authors": [
         {
             "name": "Eric Hough",
@@ -14,23 +10,12 @@
             "homepage": "http://ehough.com"
         }
     ],
-
     "require": {
-
         "php": ">=5.1.0"
     },
-
-    "require-dev": {
-        
-	    "ehough/pulsar": "1.*"
-    },
-
     "autoload": {
-
         "psr-0": {
-
             "ehough_contemplate": "src/main/php"
         }
     }
 }
-

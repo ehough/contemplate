@@ -3,6 +3,7 @@ php:
   - 5.2
   - 5.3
   - 5.4
+  - 5.5
 before_script:
   - wget https://raw.github.com/ehough/throwback/develop/src/main/bash/travis-setup.sh
   - chmod a+x travis-setup.sh

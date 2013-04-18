@@ -32,6 +32,24 @@ interface ehough_contemplate_api_Template
     function setVariable($name, $value);
 
     /**
+     * Get the value of a variable set on this template.
+     *
+     * @param string $name The name of the template variable to fetch.
+     *
+     * @return mixed The value of the variable, or null if not set.
+     */
+    function getVariable($name);
+
+    /**
+     * Determine if this template has a particular variable set on it.
+     *
+     * @param string $name The name of the variable to check for.
+     *
+     * @return boolean True if this variable has been set, false otherwise.
+     */
+    function hasVariable($name);
+
+    /**
      * Resets this template for use. Clears out any set variables.
      *
      * @return void

@@ -14,8 +14,14 @@
  */
 class ehough_contemplate_impl_SimpleTemplate implements ehough_contemplate_api_Template
 {
+    /**
+     * @var array
+     */
     private $_source = array();
 
+    /**
+     * @var string
+     */
     private $_path;
 
     /**
@@ -79,5 +85,34 @@ class ehough_contemplate_impl_SimpleTemplate implements ehough_contemplate_api_T
     public function reset()
     {
         $this->_source = array();
+    }
+
+    /**
+     * Get the value of a variable set on this template.
+     *
+     * @param string $name The name of the template variable to fetch.
+     *
+     * @return mixed The value of the variable, or null if not set.
+     */
+    public function getVariable($name)
+    {
+        if (!$this->hasVariable($name)) {
+
+            return null;
+        }
+
+        return $this->_source[$name];
+    }
+
+    /**
+     * Determine if this template has a particular variable set on it.
+     *
+     * @param string $name The name of the variable to check for.
+     *
+     * @return boolean True if this variable has been set, false otherwise.
+     */
+    public function hasVariable($name)
+    {
+        return isset($this->_source[$name]);
     }
 }

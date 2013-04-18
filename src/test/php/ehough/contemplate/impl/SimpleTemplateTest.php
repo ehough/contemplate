@@ -11,6 +11,9 @@
 
 class ehough_contemplate_impl_SimpleTemplateTest extends PHPUnit_Framework_TestCase
 {
+    /**
+     * @var ehough_contemplate_impl_SimpleTemplate
+     */
     private $_sut;
 
     public function setUp()
@@ -42,6 +45,24 @@ class ehough_contemplate_impl_SimpleTemplateTest extends PHPUnit_Framework_TestC
         $this->_sut->setPath(dirname(__FILE__) . '/../../../../resources/fixtures/fake_template.php');
         $this->_sut->setVariable('world', 'World!');
         $this->assertEquals('Hello World!', $this->_sut->toString());
+    }
+
+    public function testHasVariable()
+    {
+        $this->assertFalse($this->_sut->hasVariable('foo'));
+
+        $this->_sut->setVariable('foo', 'bar');
+
+        $this->assertTrue($this->_sut->hasVariable('foo'));
+    }
+
+    public function testGetVariable()
+    {
+        $this->assertNull($this->_sut->getVariable('foo'));
+
+        $this->_sut->setVariable('foo', 'bar');
+
+        $this->assertEquals('bar', $this->_sut->getVariable('foo'));
     }
 
     /**

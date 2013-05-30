@@ -68,7 +68,7 @@ class ehough_contemplate_impl_SimpleTemplate implements ehough_contemplate_api_T
         extract($this->_source);
 
         /** @noinspection PhpIncludeInspection */
-        include realpath($this->_path);
+        include $this->_path;
 
         $result = ob_get_contents();
 
